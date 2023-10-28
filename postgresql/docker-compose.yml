@@ -1,0 +1,14 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: "{DB 이름}"
+      POSTGRES_USER: "{사용자 ID}"
+      POSTGRES_PASSWORD: "{비밀번호}"
+    volumes:
+      - ./volumes/data:/var/lib/postgres/data
