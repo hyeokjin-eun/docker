@@ -7,4 +7,4 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./volumes/config:/etc/nginx/conf.d:ro
+      - ./volumes/config/default.conf:/etc/nginx/conf.d/default.conf
